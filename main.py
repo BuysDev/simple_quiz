@@ -1,24 +1,25 @@
 import pygame
 import sys
 
-pygame.init()
+import settings
 
-screen = pygame.display.set_mode((1920,1080))
-pygame.display.set_caption('Basic Pygame Window')
+class Game:
+    def __init__(self):
+        pygame.init()
 
-# Set up colors
-white = (255, 255, 255)
-black = (0, 0, 0)
+        pygame.display.set_caption('Quiz de conhecimentos gerais')
+        self.screen = pygame.display.set_mode((settings.width, settings.height))
 
-running = True
-while running:
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            running = False
+        self.clock = pygame.time.Clock()
+    
+    def run(self):
+        while True:
+            for event in pygame.event.get():
+                if event.type == pygame.QUIT:
+                    pygame.quit()
+                    sys.exit()
 
-    screen.fill(white)
+            pygame.display.update()
+            self.clock.tick(settings.fps)
 
-    pygame.display.flip()
-
-pygame.quit()
-sys.exit()
+Game.run()
