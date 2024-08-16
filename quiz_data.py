@@ -2,32 +2,33 @@ quiz__data = {
     {
         "question": "Qual é o país com a maior extensão territorial?",
         "choices": ["China", "Canadá", "Rússia", "Estados Unidos"],
-        "answer": "Rússia"
+        "answer": "russia"
     },
     {
         "question": 'Qual é o maior planeta do sistema solar?',
         "choices": ["Plutão", "Júpiter", "Saturno", "Urano"],
-        "answer": "Júpiter"
+        "answer": "jupiter"
     },
     {
         "question": "Quem pintou a Mona Lisa?",
         "choices": ["Leonardo da Vinci", "Vincent Van Gogh", "Pablo Picasso", "Michelangelo"],
-        "answer": "Leonardo da Vinci"
+        "answer": "leonardo_da_vinci"
     },
     {
         "question": "Maior oceano do mundo",
-        "choices": ["Pacífico", "Índico", "Atlântico", "Ártico", "Estados Unidos"],
-        "answer": "Rússia"
+        "choices": ["Pacífico", "Índico", "Atlântico", "Ártico"],
+        "answer": "Pacifico",
+        "answer_tag": 'pacifico'
     },
     {
         "question": "Cu",
         "choices": ["Ouro", "Platina", "Cobre", "Oxigênio"],
-        "answer": "Cobre"
+        "answer": "cobre"
     },
     {
         "question": "Sal de cozinha",
         "choices": ["NaOH", "NaCl", "O3", "H2O"],
-        "answer": "NaOH"
+        "answer": "naoh"
     },
     {
         "question": "Qual é o país com a maior extensão territorial?",
