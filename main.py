@@ -44,7 +44,7 @@ def game_loop():
     while True:
         screen.fill(WHITE)
 
-        if game_over:
+        if game_over: # verificando se já ta no game over
             draw_text('Você errou! Jogo terminado.', font, RED, screen, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
             draw_text('Pressione qualquer tecla para reiniciar', font, BLACK, screen, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 60)
         else:
@@ -59,7 +59,7 @@ def game_loop():
                 pygame.quit()
                 sys.exit()
 
-            if event.type == pygame.KEYDOWN:
+            if event.type == pygame.KEYDOWN: # sistema de evento para click nas teclas
                 if game_over:
                     game_loop()
                 elif event.key == pygame.K_BACKSPACE:
