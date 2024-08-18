@@ -8,10 +8,8 @@ pygame.init()
 
 screen = pygame.display.set_mode((settings.width, settings.height))
 
-restart_img = pygame.image.load('restart.png').convert_alpha()
-restart = buttons.Button(800, 500, restart_img, 1)
-
-restart.rect.center(settings.width // 2, settings.height // 2)
+try_again_img = pygame.image.load('try_again.png').convert_alpha()
+try_again = buttons.Button(800, 500, try_again_img, 1)
 
 def you_lose():
     while True:
@@ -23,11 +21,11 @@ def you_lose():
             # Verifica se o mouse foi clicado
             if event.type == pygame.MOUSEBUTTONDOWN:
                 # Verifica se o botão foi clicado
-                if restart.is_clicked(pygame.mouse.get_pos()):
+                if try_again.clicked(pygame.mouse.get_pos()):
                     main_menu()  # Retorna ao menu principal ou reinicia o jogo
 
         screen.fill((255, 255, 255))  # Limpa a tela com a cor branca
-        restart.draw(screen)
+        try_again.draw(screen)
         pygame.display.update()
 
 def main_menu():
