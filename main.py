@@ -9,8 +9,9 @@ pygame.init()
 screen = pygame.display.set_mode((settings.width, settings.height))
 
 restart_img = pygame.image.load('restart.png').convert_alpha()
-
 restart = buttons.Button(800, 500, restart_img, 1)
+
+restart.rect.center(settings.width // 2, settings.height // 2)
 
 def you_lose():
     while True:
