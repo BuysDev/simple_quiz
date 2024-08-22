@@ -1,7 +1,7 @@
 # simple_quiz
 Um jogo onde são apresentadas perguntas sobre conhecimentos gerais. 
 
-<img src="![alt text](image.png)" >
+<img src="image.png" >
 
 ##Regras
 - As respostas devem ser digitadas (tem um input invisível, só escrever que é sucesso :P);
