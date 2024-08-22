@@ -12,21 +12,26 @@ GREEN = (0, 255, 0)
 RED = (255, 0, 0)
 
 # Definindo o tamanho da tela
-SCREEN_WIDTH = 800
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 1920
+SCREEN_HEIGHT = 1080
 screen = pygame.display.set_mode((SCREEN_WIDTH, SCREEN_HEIGHT))
-pygame.display.set_caption('Quiz de Inglês - Can, Could, Be Able To')
+pygame.display.set_caption('Quiz de Técnico - Conhecimentos Gerais')
 
 # Definindo as fontes
 font = pygame.font.Font(None, 50)
 
 # Definindo as questões e respostas
 questions = [
-    ("She _____ sing very well when she was younger.", "could"),
-    ("They _____ go to the concert last night.", "couldn't"),
-    ("Will you ________ come the party?", "be able to"),
-    ("I _____ play the piano.", "can"),
-    ("He _____ swim across the river.", "could"),
+    ("Qual o rio mais longo do mundo?", "Nilo"),
+    ("Em que ano Neil Armstrong pisou na lua?", "1969"),
+    ('Quem escreveu a peça "Hamlet"?', "Shakespeare"),
+    ("Qual a moeda oficial do Japão?", "Iene"),
+    ("Qual o maior planeta do Sistema Solar?", "Jupiter"),
+    ("Em qual esporte o Brasil mais se destacou nas olimpíadas de Paris?", "Ginastica"),
+    ("Qual o animal terrestre mais rápido do mundo?", "Guepardo"),
+    ('Quem pintou a obra "Mona Lisa"?', "Leonardo da Vinci"),
+    ("Qual é o nome da capital da Bahia?", "Salvador"),
+    ("Qual é o elemento químico representado pela letra 'O'?", "Oxigenio")
 ]
 
 # Função para exibir texto na tela
@@ -44,7 +49,7 @@ def game_loop():
     while True:
         screen.fill(WHITE)
 
-        if game_over: # verificando se já ta no game over
+        if game_over:
             draw_text('Você errou! Jogo terminado.', font, RED, screen, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2)
             draw_text('Pressione qualquer tecla para reiniciar', font, BLACK, screen, SCREEN_WIDTH // 2, SCREEN_HEIGHT // 2 + 60)
         else:
@@ -59,14 +64,14 @@ def game_loop():
                 pygame.quit()
                 sys.exit()
 
-            if event.type == pygame.KEYDOWN: # sistema de evento para click nas teclas
+            if event.type == pygame.KEYDOWN:
                 if game_over:
-                    game_loop()
+                    game_loop()  # Reinicia o jogo se pressionar qualquer tecla após game over
                 elif event.key == pygame.K_BACKSPACE:
                     user_answer = user_answer[:-1]
                 elif event.key == pygame.K_RETURN:
                     correct_answer = questions[current_question_index][1]
-                    if user_answer.lower() == correct_answer:
+                    if user_answer.strip().lower() == correct_answer.lower():
                         current_question_index += 1
                         user_answer = ''
                         if current_question_index == len(questions):
