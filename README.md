@@ -1,6 +1,5 @@
 # simple_quiz
-Um jogo onde são apresentadas algumas questões de complete a frase em inglês
+Um jogo onde são apresentadas perguntas sobre conhecimentos gerais.
 
-- As respostas devem ser digitadas (tem um input invisível, só escrever que é sucesso :P)
-- Só pode responder com Can, Could e Be Able To (e suas versões negativas);
+- As respostas devem ser digitadas (tem um input invisível, só escrever que é sucesso :P);
 - Se errar uma vez, já é eliminado(a);
